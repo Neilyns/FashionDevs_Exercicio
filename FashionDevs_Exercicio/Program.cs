@@ -12,6 +12,7 @@ namespace FashionDevs_Exercicio
             double n3;
             double n4;
             double salariominimo = 1100;
+            double novamedia;
             double resultado;
             bool validacao = true;
             Program program = new Program();
@@ -95,17 +96,26 @@ namespace FashionDevs_Exercicio
                        
                         if (resultado >=7)
                         {
-                            Console.WriteLine("Parabéns, Você foi Aprovado! Sua média foi: {0}", Math.Round(resultado, 2));                          ", Math.Round(resultado, 2)");
+                            Console.WriteLine("Parabéns, Você foi Aprovado! Sua média foi: {0}", Math.Round(resultado, 2)); 
                         } else {
 
                             Console.WriteLine("Você não atingiu a média, por favor, informe sua nota de exame:");
-                            n4 = Convert.ToDouble(Console.ReadLine());
+                          
                         }
 
+                        n4 = Convert.ToDouble(Console.ReadLine());
 
-                      
+                        novamedia = ((program.Media(n1, n2, n3) + n4) / 2);
 
+                        if (novamedia>=5)
+                        {
+                            Console.WriteLine("Você foi aprovado pela nota de exame, sua média foi: {0}", Math.Round(novamedia,2) );
+                        }
+                        else {
+                            Console.WriteLine("Você foi reporvado, sua média foi: {0}", Math.Round(novamedia,2));
 
+                        }
+                                             
                         break;
                 }
 
@@ -136,8 +146,6 @@ namespace FashionDevs_Exercicio
         public double Media(double n1, double n2, double n3)
         {
             return (n1 + n2 + n3)/3;
-
-
         }
 
     }
