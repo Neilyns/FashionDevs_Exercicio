@@ -26,9 +26,7 @@ namespace FashionDevs_Exercicio
                 if (value.ToLower() == "cachorro" || value.ToLower() == "gato" || value.ToLower() == "peixe")
                 {
                     tipo = value.ToLower();
-                }
-                else
-                {
+                } else {
                     tipo = "peixe";
                 }
             }

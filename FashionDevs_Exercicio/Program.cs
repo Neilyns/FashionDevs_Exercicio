@@ -48,15 +48,11 @@ namespace FashionDevs_Exercicio
                         if (resultado < 20)
                         {
                             Console.WriteLine("Abaixo do peso");
-                        }
 
-                        else if (resultado >= 20 && resultado < 25)
-                        {
+                        } else if (resultado >= 20 && resultado < 25) {
                             Console.WriteLine("Peso Ideal");
-                        }
 
-                        else if (resultado >= 25)
-                        {
+                        } else if (resultado >= 25) {
                             Console.WriteLine("Acima do peso");
                         }
 
@@ -97,10 +93,8 @@ namespace FashionDevs_Exercicio
                         if (resultado >= 7)
                         {
                             Console.WriteLine("Parabéns, Você foi Aprovado! Sua média foi: {0}", Math.Round(resultado, 2));
-                        }
 
-                        else
-                        {
+                        } else {
                             Console.WriteLine("Você não atingiu a média, por favor, informe sua nota de exame:");
                             n4 = Convert.ToDouble(Console.ReadLine());
                             novamedia = Convert.ToDouble((program.Media(n1, n2, n3) + n4) / 2);
@@ -108,9 +102,8 @@ namespace FashionDevs_Exercicio
                             if (novamedia >= 5)
                             {
                                 Console.WriteLine("Você foi aprovado pela nota de exame, sua média foi: {0}", Math.Round(novamedia, 2));
-                            }
-                            else
-                            {
+
+                            } else {
                                 Console.WriteLine("Você foi reprovado, sua média foi: {0}", Math.Round(novamedia, 2));
 
                             }
