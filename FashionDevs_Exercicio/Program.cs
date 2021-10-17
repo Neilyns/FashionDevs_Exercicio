@@ -93,33 +93,95 @@ namespace FashionDevs_Exercicio
                         n3 = Convert.ToDouble(Console.ReadLine());
 
                         resultado = program.Media(n1, n2, n3);
-                       
-                        if (resultado >=7)
-                        {
-                            Console.WriteLine("Parabéns, Você foi Aprovado! Sua média foi: {0}", Math.Round(resultado, 2)); 
-                        } else {
 
+                        if (resultado >= 7)
+                        {
+                            Console.WriteLine("Parabéns, Você foi Aprovado! Sua média foi: {0}", Math.Round(resultado, 2));
+                        }
+
+                        else
+                        {
                             Console.WriteLine("Você não atingiu a média, por favor, informe sua nota de exame:");
-                          
+                            n4 = Convert.ToDouble(Console.ReadLine());
+                            novamedia = Convert.ToDouble((program.Media(n1, n2, n3) + n4) / 2);
+
+                            if (novamedia >= 5)
+                            {
+                                Console.WriteLine("Você foi aprovado pela nota de exame, sua média foi: {0}", Math.Round(novamedia, 2));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Você foi reprovado, sua média foi: {0}", Math.Round(novamedia, 2));
+
+                            }
                         }
 
-                        n4 = Convert.ToDouble(Console.ReadLine());
+                        break;
 
-                        novamedia = ((program.Media(n1, n2, n3) + n4) / 2);
+                    case 5:
 
-                        if (novamedia>=5)
-                        {
-                            Console.WriteLine("Você foi aprovado pela nota de exame, sua média foi: {0}", Math.Round(novamedia,2) );
-                        }
-                        else {
-                            Console.WriteLine("Você foi reporvado, sua média foi: {0}", Math.Round(novamedia,2));
+                        
+                        AnimaisEstimacao animal1 = new AnimaisEstimacao();
+                        AnimaisEstimacao animal2 = new AnimaisEstimacao();
+                        AnimaisEstimacao animal3 = new AnimaisEstimacao();
+                        AnimaisEstimacao animal4 = new AnimaisEstimacao();
+                        AnimaisEstimacao animal5 = new AnimaisEstimacao();
+                        int ttCachorro = 0, ttGato = 0, ttPeixe = 0;
 
-                        }
-                                             
+                        Console.WriteLine("Animais de estimação");
+
+                        Console.WriteLine("Informe o nome do 1° animal");
+                        animal1.Nome = Console.ReadLine();
+                        Console.WriteLine("Informe o tipo do 1° animal (Ex.: Cachorro, Gato, Peixe):");
+                        animal1.Tipo = Console.ReadLine();
+
+                            if (animal1.Tipo == "cachorro") ttCachorro++;
+                            if (animal1.Tipo == "gato") ttGato++;
+                            if (animal1.Tipo == "peixe") ttPeixe++;
+
+                        Console.WriteLine("Informe o nome do 2° animal");
+                        animal2.Nome = Console.ReadLine();
+                        Console.WriteLine("Informe o tipo do 2° animal (Ex.: Cachorro, Gato, Peixe):");
+                        animal2.Tipo = Console.ReadLine();
+
+                            if (animal2.Tipo == "cachorro") ttCachorro++;
+                            if (animal2.Tipo == "gato") ttGato++;
+                            if (animal2.Tipo == "peixe") ttPeixe++;
+
+                        Console.WriteLine("Informe o nome do 3° animal");
+                        animal3.Nome = Console.ReadLine();
+                        Console.WriteLine("Informe o tipo do 3° animal (Ex.: Cachorro, Gato, Peixe):");
+                        animal3.Tipo = Console.ReadLine();
+
+                            if (animal3.Tipo == "cachorro") ttCachorro++;
+                            if (animal3.Tipo == "gato") ttGato++;
+                            if (animal3.Tipo == "peixe") ttPeixe++;
+
+                       Console.WriteLine("Informe o nome do 4° animal");
+                       animal4.Nome = Console.ReadLine();
+                       Console.WriteLine("Informe o tipo do 4° animal (Ex.: Cachorro, Gato, Peixe):");
+                       animal4.Tipo = Console.ReadLine();
+
+                            if (animal4.Tipo == "cachorro") ttCachorro++;
+                            if (animal4.Tipo == "gato") ttGato++;
+                            if (animal4.Tipo == "peixe") ttPeixe++;
+
+                       Console.WriteLine("Informe o nome do 5° animal");
+                       animal5.Nome = Console.ReadLine();
+                       Console.WriteLine("Informe o tipo do 5° animal (Ex.: Cachorro, Gato, Peixe):");
+                       animal5.Tipo = Console.ReadLine();
+
+                            if (animal5.Tipo == "cachorro") ttCachorro++;
+                            if (animal5.Tipo == "gato") ttGato++;
+                            if (animal5.Tipo == "peixe") ttPeixe++;
+
+                      Console.WriteLine("Você possui: Cachorros: {0} , Gatos: {1} , Peixes: {2} ", ttCachorro, ttGato, ttPeixe);
+                        
+
                         break;
                 }
 
-                  
+
                 Console.Write("Aperte ENTER para continuar");
                 Console.ReadLine();
                 Console.Clear();
@@ -129,7 +191,7 @@ namespace FashionDevs_Exercicio
 
         public double Imc(double n1, double n2)
         {
-            return (n1 / Math.Pow(n2,2));
+            return (n1 / Math.Pow(n2, 2));
         }
 
         public double Salario(double n1, double salariominimo)
@@ -140,13 +202,14 @@ namespace FashionDevs_Exercicio
 
         public double Volume(double n1)
         {
-            return 4 * Math.PI * Math.Pow(n1,3) /3 ;
+            return 4 * Math.PI * Math.Pow(n1, 3) / 3;
         }
 
         public double Media(double n1, double n2, double n3)
         {
-            return (n1 + n2 + n3)/3;
+            return (n1 + n2 + n3) / 3;
         }
+
 
     }
 }
